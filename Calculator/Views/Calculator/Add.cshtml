@@ -1,0 +1,22 @@
+﻿@model Calculator.Models.Calc
+<h1> Calculator Conversion</h1>
+@using (Html.BeginForm("Add", "Calculator"))
+{
+
+    @Html.Label("Number 1")
+    @Html.TextBoxFor(x => x.Num1)
+    @Html.ValidationMessageFor(x => x.Num1)
+    <div />
+
+    @Html.Label("Number 2")
+    @Html.TextBoxFor(x => x.Num2)
+    @Html.ValidationMessageFor(x => x.Num2)
+    <div />
+
+    <input type="submit" value="Add" />
+    <div>
+        Result (Add):  @Model.Total
+    </div>
+
+
+}
